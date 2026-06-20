@@ -39,18 +39,18 @@ export function Footer() {
               <li><a href="#services" className="hover:text-indigo-400 transition-colors">All Services</a></li>
               <li><a href="#experience" className="hover:text-indigo-400 transition-colors">Credentials</a></li>
               <li><a href="#faq" className="hover:text-indigo-400 transition-colors">Patient FAQ</a></li>
-              <li><a href="#portal" className="hover:text-indigo-400 transition-colors">Patient Portal</a></li>
+              <li><a href="#contact" className="hover:text-indigo-400 transition-colors">Patient Portal</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Services</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="hover:text-indigo-400 transition-colors">Primary Care</a></li>
-              <li><a href="#" className="hover:text-indigo-400 transition-colors">Consultations</a></li>
-              <li><a href="#" className="hover:text-indigo-400 transition-colors">Preventive Health</a></li>
-              <li><a href="#" className="hover:text-indigo-400 transition-colors">Chronic Management</a></li>
-              <li><a href="#" className="hover:text-indigo-400 transition-colors">Telemedicine</a></li>
+              <li><a href="#services" className="hover:text-indigo-400 transition-colors">Primary Care</a></li>
+              <li><a href="#services" className="hover:text-indigo-400 transition-colors">Consultations</a></li>
+              <li><a href="#services" className="hover:text-indigo-400 transition-colors">Preventive Health</a></li>
+              <li><a href="#services" className="hover:text-indigo-400 transition-colors">Chronic Management</a></li>
+              <li><a href="#services" className="hover:text-indigo-400 transition-colors">Telemedicine</a></li>
             </ul>
           </div>
 

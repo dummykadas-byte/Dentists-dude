@@ -22,6 +22,15 @@ export function Header() {
     { name: 'Contact', href: '#contact' },
   ];
 
+  const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const elem = document.getElementById(targetId);
+    if (elem) {
+      elem.scrollIntoView({ behavior: 'auto' });
+    }
+  };
+
   return (
     <motion.header 
       initial={{ y: -20, opacity: 0 }}
@@ -35,7 +44,14 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group">
+        <a 
+          href="#" 
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'auto' });
+          }}
+          className="flex items-center gap-2 group"
+        >
           <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold text-lg shadow-sm group-hover:scale-105 transition-transform duration-500 ease-out">
             D
           </div>
@@ -50,7 +66,8 @@ export function Header() {
             <a 
               key={link.name} 
               href={link.href}
-              className="relative text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors group py-2"
+              onClick={(e) => handleScrollTo(e, link.href)}
+              className="relative text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors group py-2 cursor-pointer"
             >
               {link.name}
               <span className="absolute left-0 bottom-0 w-full h-[2px] bg-indigo-600 scale-x-0 group-hover:scale-x-100 transform origin-left transition-transform duration-300 ease-out rounded-full" />
@@ -61,18 +78,20 @@ export function Header() {
         {/* Desktop Actions */}
         <div className="hidden lg:flex items-center gap-4">
           <motion.a 
-            href="#portal" 
+            href="#contact" 
+            onClick={(e) => handleScrollTo(e, '#contact')}
             whileHover={{ y: -1 }}
             whileTap={{ scale: 0.98 }}
-            className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors px-4 py-2"
+            className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors px-4 py-2 cursor-pointer"
           >
             Patient Portal
           </motion.a>
           <motion.a 
             href="#contact"
+            onClick={(e) => handleScrollTo(e, '#contact')}
             whileHover={{ y: -2, boxShadow: '0 10px 25px -5px rgba(79, 70, 229, 0.2)' }}
             whileTap={{ scale: 0.97 }}
-            className="text-sm font-medium bg-slate-900 text-white px-6 py-2.5 rounded-full hover:bg-slate-800 transition-colors shadow-md"
+            className="text-sm font-medium bg-slate-900 text-white px-6 py-2.5 rounded-full hover:bg-slate-800 transition-colors shadow-md cursor-pointer"
           >
             Book Visit
           </motion.a>
@@ -102,20 +121,33 @@ export function Header() {
                 <a 
                   key={link.name} 
                   href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-base font-medium text-slate-600 py-2"
+                  onClick={(e) => {
+                    handleScrollTo(e, link.href);
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="text-base font-medium text-slate-600 py-2 cursor-pointer"
                 >
                   {link.name}
                 </a>
               ))}
               <div className="w-full h-px bg-slate-100 my-2" />
-              <a href="#portal" className="text-base font-medium text-slate-600 py-2">
+              <a 
+                href="#contact" 
+                onClick={(e) => {
+                  handleScrollTo(e, '#contact');
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-base font-medium text-slate-600 py-2 cursor-pointer"
+              >
                 Patient Portal
               </a>
               <a 
                 href="#contact" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-base font-medium bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-xl text-center mt-2 shadow-md shadow-indigo-200"
+                onClick={(e) => {
+                  handleScrollTo(e, '#contact');
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-base font-medium bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-xl text-center mt-2 shadow-md shadow-indigo-200 cursor-pointer"
               >
                 Book Visit
               </a>

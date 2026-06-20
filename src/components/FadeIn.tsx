@@ -22,17 +22,21 @@ export function FadeIn({ children, delay = 0, direction = 'up', className = '' }
     <motion.div
       initial={{ 
         opacity: 0, 
+        scale: direction === 'none' ? 1 : 0.98,
+        filter: 'blur(4px)',
         ...directions[direction]
       }}
       whileInView={{ 
         opacity: 1, 
+        scale: 1,
+        filter: 'blur(0px)',
         x: 0, 
         y: 0 
       }}
       viewport={{ once: true, margin: "-10%" }}
       transition={{ 
-        duration: 0.7, 
-        ease: [0.21, 0.47, 0.32, 0.98], // elegant ease out
+        duration: 0.8, 
+        ease: [0.16, 1, 0.3, 1], // More dramatic and refined ease out
         delay
       }}
       className={className}

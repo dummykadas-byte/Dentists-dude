@@ -41,23 +41,23 @@ export function About() {
             </h3>
             
             <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center shrink-0">
+              <div className="group flex gap-4 transition-all duration-300 hover:translate-x-2">
+                <div className="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center shrink-0 transition-colors group-hover:bg-indigo-100">
                   <span className="font-bold text-indigo-600">MD</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900">Doctor of Medicine</h4>
+                  <h4 className="font-bold text-slate-900 group-hover:text-indigo-700 transition-colors">Doctor of Medicine</h4>
                   <p className="text-slate-500 mb-1">Harvard Medical School</p>
                   <p className="text-sm text-slate-400">2005 - 2009</p>
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-full bg-purple-50 flex items-center justify-center shrink-0">
+              <div className="group flex gap-4 transition-all duration-300 hover:translate-x-2">
+                <div className="w-12 h-12 rounded-full bg-purple-50 flex items-center justify-center shrink-0 transition-colors group-hover:bg-purple-100">
                   <span className="font-bold text-purple-600">Res</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900">Internal Medicine Residency</h4>
+                  <h4 className="font-bold text-slate-900 group-hover:text-purple-700 transition-colors">Internal Medicine Residency</h4>
                   <p className="text-slate-500 mb-1">Massachusetts General Hospital</p>
                   <p className="text-sm text-slate-400">2009 - 2012</p>
                 </div>

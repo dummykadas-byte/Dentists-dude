@@ -70,11 +70,11 @@ export function Experience() {
             <div className="grid gap-4 mb-12">
               {certifications.map((cert, idx) => (
                 <FadeIn key={idx} delay={idx * 0.1}>
-                  <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center shrink-0">
+                  <div className="group bg-white p-5 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4 transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:border-purple-100 cursor-default">
+                    <div className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center shrink-0 group-hover:bg-purple-100 transition-colors">
                       <div className="w-3 h-3 rounded-full bg-purple-600" />
                     </div>
-                    <span className="font-medium text-slate-800">{cert}</span>
+                    <span className="font-medium text-slate-800 transition-colors group-hover:text-purple-700">{cert}</span>
                   </div>
                 </FadeIn>
               ))}
@@ -87,7 +87,7 @@ export function Experience() {
               </h3>
               <div className="flex flex-wrap gap-3">
                 {['Preventive Medicine', 'Women\'s Health', 'Chronic Disease', 'Top Doctor 2023', 'Patient Choice Award'].map((tag, idx) => (
-                  <span key={idx} className="px-5 py-2.5 bg-white border border-slate-200 rounded-full text-slate-700 font-medium text-sm shadow-sm">
+                  <span key={idx} className="px-5 py-2.5 bg-white border border-slate-200 rounded-full text-slate-700 font-medium text-sm shadow-sm transition-all duration-300 hover:border-teal-300 hover:shadow-md hover:-translate-y-0.5 hover:text-teal-700 cursor-default">
                     {tag}
                   </span>
                 ))}

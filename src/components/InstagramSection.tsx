@@ -38,7 +38,7 @@ export function InstagramSection() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   href="#" 
-                  className="bg-white text-slate-900 font-bold text-base md:text-lg px-8 py-4 rounded-full flex items-center gap-2 group hover:shadow-lg transition-all"
+                  className="bg-white text-slate-900 font-bold text-base md:text-lg px-8 py-4 rounded-full flex items-center gap-2 group hover:shadow-lg transition-all focus-visible:ring-indigo-600 focus-visible:outline-none"
                 >
                   Follow @dentistdude
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />

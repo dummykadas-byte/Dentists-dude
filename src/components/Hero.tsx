@@ -42,7 +42,7 @@ export function Hero() {
                 whileHover={{ y: -2, boxShadow: '0 10px 25px -5px rgba(79, 70, 229, 0.3)' }}
                 whileTap={{ scale: 0.98 }}
                 href="#contact" 
-                className="bg-slate-900 text-white font-medium text-lg px-8 py-4 rounded-full transition-colors shadow-md text-center"
+                className="bg-slate-900 text-white font-medium text-lg px-8 py-4 rounded-full transition-colors shadow-md text-center focus-visible:ring-indigo-600 focus-visible:outline-none"
               >
                 Book Appointment
               </motion.a>
@@ -50,7 +50,7 @@ export function Hero() {
                 whileHover={{ y: -2, boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.05)' }}
                 whileTap={{ scale: 0.98 }}
                 href="#about" 
-                className="bg-white text-slate-900 border border-slate-200 font-medium text-lg px-8 py-4 rounded-full hover:border-slate-300 transition-colors text-center"
+                className="bg-white text-slate-900 border border-slate-200 font-medium text-lg px-8 py-4 rounded-full hover:border-slate-300 transition-colors text-center focus-visible:ring-indigo-600 focus-visible:outline-none"
               >
                 Learn More
               </motion.a>
