@@ -1,0 +1,6 @@
+{
+  "name": "Dentist Dude - Premium Portfolio",
+  "description": "A modern, highly professional, responsive portfolio website for a healthcare professional.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
